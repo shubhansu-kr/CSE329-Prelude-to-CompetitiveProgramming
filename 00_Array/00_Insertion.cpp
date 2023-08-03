@@ -4,7 +4,7 @@
 using namespace std ;
 
 class myArray {
-private: 
+public:
     int index;
     int maxSize;
 
@@ -53,6 +53,16 @@ private:
 
 int main () {
     
+    myArray arr(10);
+    arr.insertElementAtBeginning(1);
+    arr.insertElementAtBeginning(2);
+    arr.insertElementAtBeginning(3);
+    arr.insertElementAtEnd(0);
+
+    arr.insertElementAtIndex(4, 3);
+
+    arr.printArray();
+
     return 0;
 }
 
