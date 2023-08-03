@@ -3,6 +3,49 @@
 #include <bits/stdc++.h>
 using namespace std ;
 
+class Solution3 {
+public:
+    // Rotate Anti Clockwise | Rotate left (Approach1)
+
+    // Time complexity: O(N)
+    // Space Complexity: O(1)
+
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+
+        k %= n;
+
+        // Reverse the whole array
+        // Divide the array into two parts 
+        // 0 to N-K-1 | N-K To N-1 
+        // Reverse both the parts 
+
+
+        for (int i = 0; i < n/2; ++i)
+        {
+            swap(nums[i], nums[n-i-1]);
+        }
+
+        for (int i = 0; i < (n-k)/2; ++i)
+        {
+            swap(nums[i], nums[n-k-i-1]);
+        }
+
+        for (int i = 0; i < k/2; i++)
+        {
+            swap(nums[n+k+i], nums[n-1-i]);
+        }
+            
+        // 1, 2, 3, 4, 5, 6, 7  -> 4, 5, 6, 7, 1, 2, 3
+        // n = 7  |  k = 3
+
+        // 7, 6, 5, 4, 3, 2, 1                   Reverse the whole array
+        // 7, 6, 5, 4 | 3, 2, 1                  Divide
+        // 4, 5, 6, 7 | 1, 2, 3                 Reverse both part    
+
+    }
+};
+
 class Solution2 {
 public:
     // Rotate Clockwise | Rotate Right (Approach2)
