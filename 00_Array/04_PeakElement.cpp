@@ -8,6 +8,27 @@ class Solution
 public:
     int findPeakElement(vector<int> &nums)
     {
+        return solve(nums, 0, nums.size()-1);
+    }
+
+    int solve(vector<int> &nums, int low, int high) {
+        if (low == high) return low;
+        if (high - low == 1) return (nums[high] > nums[low] ? high : low);
+
+        int mid = low + (high - low)/2;
+
+        if (nums[mid] > nums[mid-1] && nums[mid] > nums[mid+1]) return mid;
+        
+        if (nums[mid-1] > nums[mid+1]) return solve(nums, low, mid-1);
+        if (nums[mid-1] <= nums[mid+1]) return solve(nums, mid+1, high);
+    }
+};
+
+class Solution
+{
+public:
+    int findPeakElement(vector<int> &nums)
+    {
         int n = nums.size();
 
         if (n == 1) return 0;
