@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution
+class Solution1
 {
 public:
     int findPeakElement(vector<int> &nums)
