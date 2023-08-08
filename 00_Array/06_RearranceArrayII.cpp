@@ -3,6 +3,53 @@
 #include <bits/stdc++.h>
 using namespace std ;
 
+class Solution1 {
+    // Runtime Error: Don't know why
+public:
+    // Inplace arrangement.
+    vector<int> rearrangeArray(vector<int>& nums) {
+        int n = nums.size();
+
+        for (int i = 0; i < n-1; ++i)
+        {
+            if(i % 2) {
+                // odd index: negative
+                if (nums[i] < 0) continue;
+
+                // get next positive index.
+                int index = i+1;
+                while(index < n && nums[index] < 0) {
+                    ++index;
+                }
+
+                // shift the positive element.
+                while(index > 0 && index > i) {
+                    swap(nums[index], nums[index-1]);
+                    --index;
+                }
+            }
+            else {
+                // even index: positive
+                if (nums[i] > 0) continue;
+                
+                // get next negative index.
+                int index = i+1;
+                while(index < n && nums[index] > 0) {
+                    ++index;
+                }
+
+                // shift the negative element.
+                while(index > 0 && index > i) {
+                    swap(nums[index], nums[index-1]);
+                    --index;
+                }
+            }
+        }
+        
+        return nums;
+    }
+};
+
 class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
