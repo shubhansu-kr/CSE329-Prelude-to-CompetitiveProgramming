@@ -17,6 +17,7 @@ public:
                 ans[it] = it;
             }
         }
+        nums = ans;
     }
 };
 
