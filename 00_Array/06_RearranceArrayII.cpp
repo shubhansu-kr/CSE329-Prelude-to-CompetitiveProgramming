@@ -4,9 +4,8 @@
 using namespace std ;
 
 class Solution1 {
-    // Runtime Error: Don't know why
 public:
-    // Inplace arrangement.
+    // Inplace arrangement: TLE
     vector<int> rearrangeArray(vector<int>& nums) {
         int n = nums.size();
 
@@ -18,7 +17,7 @@ public:
 
                 // get next positive index.
                 int index = i+1;
-                while(index < n && nums[index] < 0) {
+                while(index < n && nums[index] > 0) {
                     ++index;
                 }
 
@@ -34,7 +33,7 @@ public:
                 
                 // get next negative index.
                 int index = i+1;
-                while(index < n && nums[index] > 0) {
+                while(index < n && nums[index] < 0) {
                     ++index;
                 }
 
