@@ -10,10 +10,7 @@ public:
         for(auto &it: sentence) {
             freq[it]++;
         }
-        for(auto &it: freq){
-            if (it.second == 0) return false;
-        }
-        return true;
+        return freq.size() == 26;
     }
 };
 
