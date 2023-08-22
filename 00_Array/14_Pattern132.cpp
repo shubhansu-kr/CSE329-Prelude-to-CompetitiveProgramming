@@ -4,6 +4,13 @@
 using namespace std ;
 
 class Solution {
+public:
+    bool find132pattern(vector<int>& nums) {
+        
+    }
+};
+
+class Solution {
 
     // [1,0,1,-4,-3]
     // [3,5,0,3,4]
