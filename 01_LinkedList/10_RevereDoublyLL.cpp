@@ -96,6 +96,24 @@ void free_doubly_linked_list(DoublyLinkedListNode *node)
  *
  */
 
+DoublyLinkedListNode *reverse1(DoublyLinkedListNode *llist)
+{
+    if (!llist || !llist->next) return llist;
+
+    DoublyLinkedListNode *p = llist, *prev = nullptr, *temp, *ans;
+    while(p) {
+        temp = p->next;
+
+        p->next = prev;
+        prev = p;
+        p->prev = temp;
+
+        p = temp;
+    }
+    
+    return prev;
+}
+
 DoublyLinkedListNode *reverse(DoublyLinkedListNode *llist)
 {
     if (!llist || !llist->next) return llist;
