@@ -17,14 +17,23 @@ class Solution {
 public:
 
     Node* solve(Node *parent) {
-        Node *p = parent;
+        Node *p = parent, *prev = nullptr;
         while(p) {
             if (p->child) {
-                Node *temp = solve(p);
+                Node *tail = solve(p->child);
+                Node *temp = p->next;
+
+                p->next = p->child;
+                p->child->prev = p;
+                p->child = nullptr;
+
+                tail->next = temp;
+                if (temp) temp->prev = tail;
             }
+            prev = p;
             p = p->next;
         }
-        return parent;
+        return prev;
     }
 
     Node* flatten(Node* head) {
