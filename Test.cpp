@@ -1,15 +1,93 @@
-#include <bits/stdc++.h>
-using namespace std ;
+// // 1
+// let keys = "BDCACCDCBAABCBBCCDCCCCCBCDBACDCBBBCCBCADCCDDBCAACCCDCBDDABCADDDBBDDAAADCDBC";
+// let len = keys.length;
 
-struct ListNode {
-    int val;
-    ListNode * next;
-    ListNode():val(0), next(nullptr){}
-    ListNode(int val):val(val), next(nullptr){}
-    ListNode(int val, ListNode *next):val(val), next(next){}
-};
+// let i = 0;
 
-int main () {
+// const inter = setInterval(
+//   function(){
+//     document.querySelector(`#${keys[i]}_${i+1}`).click();
+//     document.querySelector("#main_div > div.tableWidthPercent > div.onlineTestLeftDiv > div.qnav > span.saveNextButton > a").click();
+//     i++;
     
-    return 0;
-}
+//     if(i == len){
+//       clearInterval(inter)
+//     }
+//   },
+// 2000);
+
+// // 2
+// CADADBCBCCBBCBBAACADBABACAADDCDCACBCCABBDBBDBDABCBCDAADDAADBDBBABDCDCCBBDAA
+// let keys = "CADADBCBCCBBCBBAACADBABACAADDCDCACBCCABBDBBDBDABCBCDAADDAADBDBBABDCDCCBBDAA";
+// let len = keys.length;
+
+// let i = 0;
+
+// const inter = setInterval(
+//   function(){
+//     document.querySelector(`#${keys[i]}_${i+1}`).click();
+//     document.querySelector("#main_div > div.tableWidthPercent > div.onlineTestLeftDiv > div.qnav > span.saveNextButton > a").click();
+//     i++;
+    
+//     if(i == len){
+//       clearInterval(inter)
+//     }
+//   },
+// 2000);
+
+// // 3
+// CABCDDCABCDBDACABCBDBABDDCBCDADADACDDACABDCCDBCDDCBADBCDBCDCACAADEACBAADBCD
+// let keys = "CABCDDCABCDBDACABCBDBABDDCBCDADADACDDACABDCCDBCDDCBADBCDBCDCACAADEACBAADBCD";
+// let len = keys.length;
+
+// let i = 0;
+
+// const inter = setInterval(
+//   function(){
+//     document.querySelector(`#${keys[i]}_${i+1}`).click();
+//     document.querySelector("#main_div > div.tableWidthPercent > div.onlineTestLeftDiv > div.qnav > span.saveNextButton > a").click();
+//     i++;
+    
+//     if(i == len){
+//       clearInterval(inter)
+//     }
+//   },
+// 2000);
+
+// // 4
+// CCCADBDCACAACDACDABCAADBCBAABDCDDADCBBDABDCACCBAAACDCDADBCBACCDDBDCDCADCBCA
+// let keys = "CCCADBDCACAACDACDABCAADBCBAABDCDDADCBBDABDCACCBAAACDCDADBCBACCDDBDCDCADCBCA";
+// let len = keys.length;
+
+// let i = 0;
+
+// const inter = setInterval(
+//   function(){
+//     document.querySelector(`#${keys[i]}_${i+1}`).click();
+//     document.querySelector("#main_div > div.tableWidthPercent > div.onlineTestLeftDiv > div.qnav > span.saveNextButton > a").click();
+//     i++;
+    
+//     if(i == len){
+//       clearInterval(inter)
+//     }
+//   },
+// 2000);
+
+// // 5
+// DDBABCCCDDADBACCBBADBAABABACDABCCBBDDABAACBABDBCADCBADDBDBBBABDACCADABCDADD
+// let keys = "DDBABCCCDDADBACCBBADBAABABACDABCCBBDDABAACBABDBCADCBADDBDBBBABDACCADABCDADD";
+// let len = keys.length;
+
+// let i = 0;
+
+// const inter = setInterval(
+//   function(){
+//     document.querySelector(`#${keys[i]}_${i+1}`).click();
+//     document.querySelector("#main_div > div.tableWidthPercent > div.onlineTestLeftDiv > div.qnav > span.saveNextButton > a").click();
+//     i++;
+    
+//     if(i == len){
+//       clearInterval(inter)
+//     }
+//   },
+// 2000);
